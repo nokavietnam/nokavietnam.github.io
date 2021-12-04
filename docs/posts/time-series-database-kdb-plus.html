@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Database kdb+ | Noka Blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="Tìm hiểu về Time-Series Database kdb+">
+    
+    <link rel="preload" href="/assets/css/0.styles.7cfabf05.css" as="style"><link rel="preload" href="/assets/js/app.84ecfd79.js" as="script"><link rel="preload" href="/assets/js/2.6a318fbd.js" as="script"><link rel="preload" href="/assets/js/19.55e2d95a.js" as="script"><link rel="prefetch" href="/assets/js/10.5df2654e.js"><link rel="prefetch" href="/assets/js/11.9829d830.js"><link rel="prefetch" href="/assets/js/12.06121d72.js"><link rel="prefetch" href="/assets/js/13.373aa021.js"><link rel="prefetch" href="/assets/js/14.daf99656.js"><link rel="prefetch" href="/assets/js/15.30fec9e7.js"><link rel="prefetch" href="/assets/js/16.cd5d0125.js"><link rel="prefetch" href="/assets/js/17.26eed006.js"><link rel="prefetch" href="/assets/js/18.86e8e45e.js"><link rel="prefetch" href="/assets/js/20.c3f4623b.js"><link rel="prefetch" href="/assets/js/3.1cd0f6c6.js"><link rel="prefetch" href="/assets/js/4.ba1f4fad.js"><link rel="prefetch" href="/assets/js/5.fc1b8885.js"><link rel="prefetch" href="/assets/js/6.289e16d6.js"><link rel="prefetch" href="/assets/js/7.95d2c0d2.js"><link rel="prefetch" href="/assets/js/8.c3449be7.js"><link rel="prefetch" href="/assets/js/9.e0409315.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7cfabf05.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Noka Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Trang chủ
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Chuyên mục" class="dropdown-title"><span class="title">Chuyên mục</span> <span class="arrow down"></span></button> <button type="button" aria-label="Chuyên mục" class="mobile-dropdown-title"><span class="title">Chuyên mục</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/danh-muc/csharp.html" class="nav-link">
+  C#
+</a></li><li class="dropdown-item"><!----> <a href="/danh-muc/java.html" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/danh-muc/javascript.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/danh-muc/machine-learning.html" class="nav-link">
+  Machine Learning
+</a></li><li class="dropdown-item"><!----> <a href="/danh-muc/database.html" class="nav-link">
+  Database
+</a></li></ul></div></div><div class="nav-item"><a href="/bai-viet/" class="nav-link">
+  Bài viết
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  Giới thiệu
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Trang chủ
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Chuyên mục" class="dropdown-title"><span class="title">Chuyên mục</span> <span class="arrow down"></span></button> <button type="button" aria-label="Chuyên mục" class="mobile-dropdown-title"><span class="title">Chuyên mục</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/danh-muc/csharp.html" class="nav-link">
+  C#
+</a></li><li class="dropdown-item"><!----> <a href="/danh-muc/java.html" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/danh-muc/javascript.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/danh-muc/machine-learning.html" class="nav-link">
+  Machine Learning
+</a></li><li class="dropdown-item"><!----> <a href="/danh-muc/database.html" class="nav-link">
+  Database
+</a></li></ul></div></div><div class="nav-item"><a href="/bai-viet/" class="nav-link">
+  Bài viết
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  Giới thiệu
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Database kdb+</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/posts/time-series-database-kdb-plus.html#time-series-database-la-gi" class="sidebar-link">Time-Series Database là gì?</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="tim-hieu-ve-kdb"><a href="#tim-hieu-ve-kdb" class="header-anchor">#</a> Tìm hiểu về kdb+</h1> <h2 id="time-series-database-la-gi"><a href="#time-series-database-la-gi" class="header-anchor">#</a> Time-Series Database là gì?</h2></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.84ecfd79.js" defer></script><script src="/assets/js/2.6a318fbd.js" defer></script><script src="/assets/js/19.55e2d95a.js" defer></script>
+  </body>
+</html>
