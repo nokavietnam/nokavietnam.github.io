@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://blog.nokavietnam.com/</loc>
+  <lastmod>2021-12-08T17:53:04+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://blog.nokavietnam.com/danh-muc/csharp.html</loc>
+  <lastmod>2021-12-08T17:53:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.nokavietnam.com/danh-muc/java.html</loc>
+  <lastmod>2021-12-08T17:53:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.nokavietnam.com/danh-muc/javascript.html</loc>
+  <lastmod>2021-12-08T17:53:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.nokavietnam.com/danh-muc/vuejs.html</loc>
+  <lastmod>2021-12-08T17:53:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.nokavietnam.com/danh-muc/machine-learning.html</loc>
+  <lastmod>2021-12-08T17:53:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.nokavietnam.com/danh-muc/database.html</loc>
+  <lastmod>2021-12-08T17:53:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.nokavietnam.com/bai-viet/</loc>
+  <lastmod>2021-12-08T17:53:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.nokavietnam.com/posts/boolean-retrival.html</loc>
+  <lastmod>2021-12-08T17:53:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.nokavietnam.com/posts/vector-space.html</loc>
+  <lastmod>2021-12-08T17:53:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.nokavietnam.com/posts/time-series-database-kdb-plus.html</loc>
+  <lastmod>2021-12-08T17:53:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.nokavietnam.com/posts/install-database-kdb-plus.html</loc>
+  <lastmod>2021-12-08T17:53:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.nokavietnam.com/posts/static-web-vuepress.html</loc>
+  <lastmod>2021-12-08T17:53:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
