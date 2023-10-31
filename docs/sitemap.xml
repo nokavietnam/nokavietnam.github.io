@@ -6,67 +6,67 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://blog.nokavietnam.com/</loc>
+  <loc>https://blog.hoclamdev.com/</loc>
   <lastmod>2021-12-08T17:53:04+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://blog.nokavietnam.com/danh-muc/csharp.html</loc>
+  <loc>https://blog.hoclamdev.com/danh-muc/csharp.html</loc>
   <lastmod>2021-12-08T17:53:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.nokavietnam.com/danh-muc/java.html</loc>
+  <loc>https://blog.hoclamdev.com/danh-muc/java.html</loc>
   <lastmod>2021-12-08T17:53:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.nokavietnam.com/danh-muc/javascript.html</loc>
+  <loc>https://blog.hoclamdev.com/danh-muc/javascript.html</loc>
   <lastmod>2021-12-08T17:53:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.nokavietnam.com/danh-muc/vuejs.html</loc>
+  <loc>https://blog.hoclamdev.com/danh-muc/vuejs.html</loc>
   <lastmod>2021-12-08T17:53:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.nokavietnam.com/danh-muc/machine-learning.html</loc>
+  <loc>https://blog.hoclamdev.com/danh-muc/machine-learning.html</loc>
   <lastmod>2021-12-08T17:53:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.nokavietnam.com/danh-muc/database.html</loc>
+  <loc>https://blog.hoclamdev.com/danh-muc/database.html</loc>
   <lastmod>2021-12-08T17:53:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.nokavietnam.com/bai-viet/</loc>
+  <loc>https://blog.hoclamdev.com/bai-viet/</loc>
   <lastmod>2021-12-08T17:53:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.nokavietnam.com/posts/boolean-retrival.html</loc>
+  <loc>https://blog.hoclamdev.com/posts/boolean-retrival.html</loc>
   <lastmod>2021-12-08T17:53:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.nokavietnam.com/posts/vector-space.html</loc>
+  <loc>https://blog.hoclamdev.com/posts/vector-space.html</loc>
   <lastmod>2021-12-08T17:53:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.nokavietnam.com/posts/time-series-database-kdb-plus.html</loc>
+  <loc>https://blog.hoclamdev.com/posts/time-series-database-kdb-plus.html</loc>
   <lastmod>2021-12-08T17:53:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.nokavietnam.com/posts/install-database-kdb-plus.html</loc>
+  <loc>https://blog.hoclamdev.com/posts/install-database-kdb-plus.html</loc>
   <lastmod>2021-12-08T17:53:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.nokavietnam.com/posts/static-web-vuepress.html</loc>
+  <loc>https://blog.hoclamdev.com/posts/static-web-vuepress.html</loc>
   <lastmod>2021-12-08T17:53:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
