@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhoclamdev=self.webpackChunkhoclamdev||[]).push([[543],{8256:a=>{a.exports=JSON.parse('{"tag":{"label":"dsa","permalink":"/blog/tags/dsa","allTagsPath":"/blog/tags","count":1,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/dsa","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

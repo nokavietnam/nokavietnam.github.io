@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /about/
-Allow: /
-Sitemap: https://blog.hoclamdev.com/sitemap.xml
