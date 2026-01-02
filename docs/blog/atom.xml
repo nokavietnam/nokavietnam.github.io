@@ -2,11 +2,67 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hoclamdev.com/blog</id>
     <title>Hoc Lam Dev Blog</title>
-    <updated>2025-09-28T16:23:52.000Z</updated>
+    <updated>2026-01-02T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hoclamdev.com/blog"/>
     <subtitle>Hoc Lam Dev Blog</subtitle>
     <icon>https://hoclamdev.com/img/hoclamdev.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Things to Do After Installing Ubuntu]]></title>
+        <id>https://hoclamdev.com/blog/things-to-do-after-installing-ubuntu</id>
+        <link href="https://hoclamdev.com/blog/things-to-do-after-installing-ubuntu"/>
+        <updated>2026-01-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Things to Do After Installing Ubuntu]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="things-to-do-after-installing-ubuntu">Things to Do After Installing Ubuntu<a href="https://hoclamdev.com/blog/things-to-do-after-installing-ubuntu#things-to-do-after-installing-ubuntu" class="hash-link" aria-label="Direct link to Things to Do After Installing Ubuntu" title="Direct link to Things to Do After Installing Ubuntu" translate="no">​</a></h2>
+<p>In this post, I want to share the things I usually do after installing Ubuntu.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="update-and-upgrade-package">Update and upgrade package<a href="https://hoclamdev.com/blog/things-to-do-after-installing-ubuntu#update-and-upgrade-package" class="hash-link" aria-label="Direct link to Update and upgrade package" title="Direct link to Update and upgrade package" translate="no">​</a></h3>
+<p>Update and upgrade your system to keep your software up to date.</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt update</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt upgrade -y</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="remove-unused-packages">Remove unused packages<a href="https://hoclamdev.com/blog/things-to-do-after-installing-ubuntu#remove-unused-packages" class="hash-link" aria-label="Direct link to Remove unused packages" title="Direct link to Remove unused packages" translate="no">​</a></h3>
+<p>This command helps clean up unused packages and free disk space.</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt autoremove</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="install-compilation-tools">Install compilation tools<a href="https://hoclamdev.com/blog/things-to-do-after-installing-ubuntu#install-compilation-tools" class="hash-link" aria-label="Direct link to Install compilation tools" title="Direct link to Install compilation tools" translate="no">​</a></h3>
+<p>Install the basic compilation tools required to build software from source.</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># Install to install some tools</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt install build-essential</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># check</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">gcc --version</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">g++ --version</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="install-network-tool">Install network tool<a href="https://hoclamdev.com/blog/things-to-do-after-installing-ubuntu#install-network-tool" class="hash-link" aria-label="Direct link to Install network tool" title="Direct link to Install network tool" translate="no">​</a></h3>
+<p>Provides legacy networking commands such as <code>ifconfig</code> and <code>netstat</code></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># install net-tools</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt install net-tools</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># check ip</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ifconfig</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="install-firewall">Install firewall<a href="https://hoclamdev.com/blog/things-to-do-after-installing-ubuntu#install-firewall" class="hash-link" aria-label="Direct link to Install firewall" title="Direct link to Install firewall" translate="no">​</a></h3>
+<p>Install a user-friendly firewall tool to helps secure your Ubuntu system and control incoming and outgoing network traffic.</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># install firewall</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt install ufw</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Check status firewall</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo ufw status verbose</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># If you use SSH remotely, allow SSH before enabling the firewall</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo ufw allow ssh # (skip this step if you are using Ubuntu as a desktop client)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># enalbe/disable firewall</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo ufw enable</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo ufw disable</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Control ufw via GUI</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt install gufw</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre></div></div>
+<p>Thanks for reading, I hope you find this helpful.</p>]]></content>
+        <author>
+            <name>Hieu Nguyen</name>
+            <uri>https://linkedin.com/in/nokanguyen</uri>
+        </author>
+        <category label="Ubuntu" term="Ubuntu"/>
+        <category label="Tips" term="Tips"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Intro Vim editor - Lazy Vim]]></title>
+        <id>https://hoclamdev.com/blog/vim-editor</id>
+        <link href="https://hoclamdev.com/blog/vim-editor"/>
+        <updated>2025-10-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[What is Vim?]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-vim">What is <code>Vim</code>?<a href="https://hoclamdev.com/blog/vim-editor#what-is-vim" class="hash-link" aria-label="Direct link to what-is-vim" title="Direct link to what-is-vim" translate="no">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-the-lazyvim">What is the <code>LazyVim</code>?<a href="https://hoclamdev.com/blog/vim-editor#what-is-the-lazyvim" class="hash-link" aria-label="Direct link to what-is-the-lazyvim" title="Direct link to what-is-the-lazyvim" translate="no">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-tmux">What is <code>Tmux</code>?<a href="https://hoclamdev.com/blog/vim-editor#what-is-tmux" class="hash-link" aria-label="Direct link to what-is-tmux" title="Direct link to what-is-tmux" translate="no">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-i-choose-lazyvim-and-tmux">Why I choose <code>LazyVim</code> and <code>Tmux</code>?<a href="https://hoclamdev.com/blog/vim-editor#why-i-choose-lazyvim-and-tmux" class="hash-link" aria-label="Direct link to why-i-choose-lazyvim-and-tmux" title="Direct link to why-i-choose-lazyvim-and-tmux" translate="no">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-start">How to start?<a href="https://hoclamdev.com/blog/vim-editor#how-to-start" class="hash-link" aria-label="Direct link to How to start?" title="Direct link to How to start?" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="installation">Installation<a href="https://hoclamdev.com/blog/vim-editor#installation" class="hash-link" aria-label="Direct link to Installation" title="Direct link to Installation" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="install-nvim">Install <code>Nvim</code><a href="https://hoclamdev.com/blog/vim-editor#install-nvim" class="hash-link" aria-label="Direct link to install-nvim" title="Direct link to install-nvim" translate="no">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="install-lazyvim">Install <code>LazyVim</code><a href="https://hoclamdev.com/blog/vim-editor#install-lazyvim" class="hash-link" aria-label="Direct link to install-lazyvim" title="Direct link to install-lazyvim" translate="no">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="install-tmux">Install <code>Tmux</code><a href="https://hoclamdev.com/blog/vim-editor#install-tmux" class="hash-link" aria-label="Direct link to install-tmux" title="Direct link to install-tmux" translate="no">​</a></h4>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="basic">Basic<a href="https://hoclamdev.com/blog/vim-editor#basic" class="hash-link" aria-label="Direct link to Basic" title="Direct link to Basic" translate="no">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="plugin">Plugin<a href="https://hoclamdev.com/blog/vim-editor#plugin" class="hash-link" aria-label="Direct link to Plugin" title="Direct link to Plugin" translate="no">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-the-benefit">What is the benefit?<a href="https://hoclamdev.com/blog/vim-editor#what-is-the-benefit" class="hash-link" aria-label="Direct link to What is the benefit?" title="Direct link to What is the benefit?" translate="no">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="my-configuration">My configuration<a href="https://hoclamdev.com/blog/vim-editor#my-configuration" class="hash-link" aria-label="Direct link to My configuration" title="Direct link to My configuration" translate="no">​</a></h2>]]></content>
+        <author>
+            <name>Hieu Nguyen</name>
+            <uri>https://linkedin.com/in/nokanguyen</uri>
+        </author>
+        <category label="Tool" term="Tool"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[100 Days Leetcode]]></title>
         <id>https://hoclamdev.com/blog/tags/100-days-leetcode</id>
@@ -46,7 +102,7 @@
             <uri>https://linkedin.com/in/nokanguyen</uri>
         </author>
         <category label="leetcode" term="leetcode"/>
-        <category label="dsa" term="dsa"/>
+        <category label="Data Structures and algorithms" term="Data Structures and algorithms"/>
         <category label="100 Days LeetCode" term="100 Days LeetCode"/>
     </entry>
 </feed>
