@@ -4,10 +4,87 @@
         <title>Hoc Lam Dev Blog</title>
         <link>https://hoclamdev.com/blog</link>
         <description>Hoc Lam Dev Blog</description>
-        <lastBuildDate>Wed, 01 Apr 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 02 Apr 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Understanding the CAP Theorem in Distributed Systems]]></title>
+            <link>https://hoclamdev.com/blog/cap-theorem</link>
+            <guid>https://hoclamdev.com/blog/cap-theorem</guid>
+            <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[A plain-English guide to the CAP Theorem — the fundamental trade-off in distributed databases, what happens during networking failures, and why you must choose between consistency and availability.]]></description>
+            <content:encoded><![CDATA[<p>A plain-English guide to the CAP Theorem — the fundamental trade-off in distributed databases, what happens during networking failures, and why you must choose between consistency and availability.</p>
+<p>When building a system for a single local database, data accuracy and uptime seem easy to guarantee. But when you scale out to a distributed system (like microservices with replicated databases), everything changes. You can no longer have it perfectly your way.</p>
+<p>In my experience working with high-volume banking systems and e-wallets, choosing the right database isn't just about SQL vs NoSQL — it's about what happens when the network fails. Do you show the user outdated data, or do you show them an error?</p>
+<p>This dilemma is formalized by the <strong>CAP Theorem</strong> (also known as Brewer's theorem). Let's break it down.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-is-the-cap-theorem">What is the CAP Theorem?<a href="https://hoclamdev.com/blog/cap-theorem#what-is-the-cap-theorem" class="hash-link" aria-label="Direct link to What is the CAP Theorem?" title="Direct link to What is the CAP Theorem?" translate="no">​</a></h2>
+<p>The CAP Theorem states that a distributed data store can only guarantee <strong>two out of the following three</strong> characteristics simultaneously:</p>
+<ol>
+<li class=""><strong>C</strong>onsistency</li>
+<li class=""><strong>A</strong>vailability</li>
+<li class=""><strong>P</strong>artition Tolerance</li>
+</ol>
+<p>Since network partitions (the "P") are unavoidable in a distributed system, the real choice you make is always between <strong>Consistency (C)</strong> and <strong>Availability (A)</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-consistency-c">1. Consistency (C)<a href="https://hoclamdev.com/blog/cap-theorem#1-consistency-c" class="hash-link" aria-label="Direct link to 1. Consistency (C)" title="Direct link to 1. Consistency (C)" translate="no">​</a></h3>
+<p>In a highly consistent system, every read receives the most recent write (or an error). If you update a user's wallet balance on Node A, and immediately read it from Node B, you are guaranteed to see the updated balance. It ensures all nodes see the same data at the exact same time.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-availability-a">2. Availability (A)<a href="https://hoclamdev.com/blog/cap-theorem#2-availability-a" class="hash-link" aria-label="Direct link to 2. Availability (A)" title="Direct link to 2. Availability (A)" translate="no">​</a></h3>
+<p>Every request receives a (non-error) response, without the guarantee that it contains the most recent write. If Node A is disconnected from Node B, Node B will still respond to reads using whatever old data it has.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-partition-tolerance-p">3. Partition Tolerance (P)<a href="https://hoclamdev.com/blog/cap-theorem#3-partition-tolerance-p" class="hash-link" aria-label="Direct link to 3. Partition Tolerance (P)" title="Direct link to 3. Partition Tolerance (P)" translate="no">​</a></h3>
+<p>The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes. In real life, network cables get cut, routers fail, and data centers lose power. You <strong>cannot</strong> choose to ignore Partition Tolerance.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-illusion-of-choose-2">The Illusion of "Choose 2"<a href="https://hoclamdev.com/blog/cap-theorem#the-illusion-of-choose-2" class="hash-link" aria-label="Direct link to The Illusion of &quot;Choose 2&quot;" title="Direct link to The Illusion of &quot;Choose 2&quot;" translate="no">​</a></h2>
+<p>You'll often see diagrams showing a triangle where you can pick any combination: CA, CP, or AP.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">          Consistency</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">              /\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">             /  \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            /    \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        CA /      \ CP</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          /        \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">         /          \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        /____________\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> Availability      Partition</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        AP         Tolerance</span><br></span></code></pre></div></div>
+<p>This is <strong>misleading</strong>. Because network partitions (P) are a fact of life, your system <em>must</em> be Partition Tolerant. Therefore, when a partition occurs, your system is forced to choose between <strong>CP</strong> and <strong>AP</strong>.</p>
+<ul>
+<li class=""><strong>Drop Availability (CP):</strong> Cancel the operation to ensure data remains consistent. (Show an error).</li>
+<li class=""><strong>Drop Consistency (AP):</strong> Proceed with the operation using possibly stale data. (Always respond).</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="real-world-scenarios">Real-World Scenarios<a href="https://hoclamdev.com/blog/cap-theorem#real-world-scenarios" class="hash-link" aria-label="Direct link to Real-World Scenarios" title="Direct link to Real-World Scenarios" translate="no">​</a></h2>
+<p>Imagine an ATM system built on a distributed database with two nodes: Node A (Hanoi) and Node B (HCM City). Currently, my balance is $100.</p>
+<p>Suddenly, the network link between Hanoi and HCM City goes down (a Partition occurs). I withdraw $50 at the Hanoi ATM (updating Node A to $50). Immediately after, I check my balance on the mobile app, which routes to Node B in HCM City.</p>
+<p>Node B cannot talk to Node A to sync the balance. What should Node B do?</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario-1-the-cp-choice-consistency-over-availability">Scenario 1: The CP Choice (Consistency over Availability)<a href="https://hoclamdev.com/blog/cap-theorem#scenario-1-the-cp-choice-consistency-over-availability" class="hash-link" aria-label="Direct link to Scenario 1: The CP Choice (Consistency over Availability)" title="Direct link to Scenario 1: The CP Choice (Consistency over Availability)" translate="no">​</a></h3>
+<p>Node B knows it cannot talk to Node A and realizes its data might be stale. To prevent a consistency error (like me withdrawing another $100), Node B <strong>refuses to process the request</strong>.</p>
+<ul>
+<li class=""><strong>Result:</strong> The mobile app shows "Service Unavailable."</li>
+<li class=""><strong>Use case:</strong> Financial systems, banking balances, inventory management.</li>
+<li class=""><strong>Databases:</strong> MongoDB, Redis, HBase, traditional relation databases (PostgreSQL/MySQL) configured for synchronous replication.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario-2-the-ap-choice-availability-over-consistency">Scenario 2: The AP Choice (Availability over Consistency)<a href="https://hoclamdev.com/blog/cap-theorem#scenario-2-the-ap-choice-availability-over-consistency" class="hash-link" aria-label="Direct link to Scenario 2: The AP Choice (Availability over Consistency)" title="Direct link to Scenario 2: The AP Choice (Availability over Consistency)" translate="no">​</a></h3>
+<p>Node B decides that answering the user is more important than absolute accuracy. It returns the data it currently has ($100).</p>
+<ul>
+<li class=""><strong>Result:</strong> The mobile app shows a $100 balance, even though the actual balance is $50. Eventually (when the network recovers), Node B will sync and fix the balance.</li>
+<li class=""><strong>Use case:</strong> Social media feeds, likes/comments, shopping cart items, metric tracking.</li>
+<li class=""><strong>Databases:</strong> Cassandra, DynamoDB, CouchDB. (Often described as implementing "Eventual Consistency").</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="beyond-cap-the-pacelc-theorem">Beyond CAP: The PACELC Theorem<a href="https://hoclamdev.com/blog/cap-theorem#beyond-cap-the-pacelc-theorem" class="hash-link" aria-label="Direct link to Beyond CAP: The PACELC Theorem" title="Direct link to Beyond CAP: The PACELC Theorem" translate="no">​</a></h2>
+<p>In 2010, the CAP theorem was expanded to <strong>PACELC</strong> to account for system behavior when the network is perfectly fine (no partitions).</p>
+<p>PACELC states:</p>
+<blockquote>
+<p>If there is a <strong>P</strong>artition (<strong>P</strong>), how does the system trade off <strong>A</strong>vailability and <strong>C</strong>onsistency (<strong>A</strong> and <strong>C</strong>)?
+<strong>E</strong>lse (<strong>E</strong>), when the system is running normally, how does it trade off <strong>L</strong>atency (<strong>L</strong>) and <strong>C</strong>onsistency (<strong>C</strong>)?</p>
+</blockquote>
+<p>In a normal state (no partition), you still have a trade-off:</p>
+<ul>
+<li class="">Do you update Node A, wait for it to sync to Node B, and then reply to the user? (High Consistency, High Latency).</li>
+<li class="">Do you update Node A, reply "Success!" immediately, and sync to Node B in the background? (Low Latency, Eventual Consistency).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-takeaways">Key Takeaways<a href="https://hoclamdev.com/blog/cap-theorem#key-takeaways" class="hash-link" aria-label="Direct link to Key Takeaways" title="Direct link to Key Takeaways" translate="no">​</a></h2>
+<ol>
+<li class=""><strong>You don't pick two out of three.</strong> You assume <strong>P</strong> (network partitions will happen), and you decide whether your system should act <strong>CP</strong> or <strong>AP</strong> when they do.</li>
+<li class=""><strong>CP Systems</strong> prioritize correctness. If nodes can't communicate, they stop serving data to prevent inconsistencies. Ideal for ledgers and billing.</li>
+<li class=""><strong>AP Systems</strong> prioritize uptime. They will always return data, even if it's stale. Ideal for recommendations, feeds, and analytics.</li>
+<li class=""><strong>Consistency isn't binary.</strong> In reality, "Eventual Consistency" is a spectrum, and tools like Cassandra let you tune consistency levels on a per-query basis.</li>
+</ol>
+<hr>
+<p>Thanks for reading! Understanding the CAP theorem is a rite of passage for any backend engineer and a staple in system design interviews. For more insights on building robust backend systems, check out my <a class="" href="https://hoclamdev.com/blog/clean-architecture">Clean Architecture Guide</a> and <a class="" href="https://hoclamdev.com/blog/saga-pattern">Saga Pattern</a> post. 🚀</p>]]></content:encoded>
+            <category>System Design</category>
+            <category>Database</category>
+            <category>Microservices</category>
+        </item>
         <item>
             <title><![CDATA[Batch Clone & Pull Multiple Git Repos with a Bash Script]]></title>
             <link>https://hoclamdev.com/blog/batch-git-clone-pull-bash-script</link>
